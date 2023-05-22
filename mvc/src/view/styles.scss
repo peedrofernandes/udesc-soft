@@ -20,6 +20,10 @@ ul, li {
   list-style: none;
 }
 
+.hidden {
+  display: none;
+}
+
 #content {
   margin-top: 80px;
   display: flex;
@@ -171,5 +175,19 @@ ul, li {
         opacity: 1;
       }
     }
+  }
+}
+
+#modal-background {
+  position: absolute;
+  top: 0;
+  height: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #11141490;
+  z-index: 1;
+
+  #modal-box {
+    background-color: white;
   }
 }

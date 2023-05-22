@@ -46,7 +46,26 @@ export default class Components {
     return liString
   }
 
-  static createAddBookComponent(): string {
+  static createGridComponent(tag: string, children?: string): string
+  {
+    return `
+      <${tag} class="grid">
+        ${children}
+      </${tag}>
+    `
+  }
+
+  static createGridItemComponent(span: number, children?: string): string
+  {
+    return `
+      <div class="grid-item s${span}">
+        ${children}
+      </div>
+    `
+  }
+
+  static createAddBookComponent(): string
+  {
     const liString = `
       <li class="book add">
         ${this._createIconComponent(this._plusIconSvgPath, 32, "#111414")}

@@ -1,0 +1,37 @@
+[
+  {
+    "id": "1",
+    "title": "Dom Quixote",
+    "author": "Miguel de Cervantes",
+    "gender": "Romance",
+    "desc": "A história de um nobre fidalgo que enlouquece após ler muitos livros de cavalaria e parte em uma jornada como cavaleiro andante."
+  },
+  {
+    "id": "2",
+    "title": "Cem Anos de Solidão",
+    "author": "Gabriel García Márquez",
+    "gender": "Realismo Mágico",
+    "desc": "A saga da família Buendía ao longo de sete gerações na fictícia cidade de Macondo, explorando temas como amor, solidão e a história da América Latina."
+  },
+  {
+    "id": "3",
+    "title": "1984",
+    "author": "George Orwell",
+    "gender": "Ficção Distópica",
+    "desc": "Um romance distópico que descreve uma sociedade governada por um regime totalitário, onde a vigilância e a manipulação dos cidadãos são onipresentes."
+  },
+  {
+    "id": "4",
+    "title": "O Pequeno Príncipe",
+    "author": "Antoine de Saint-Exupéry",
+    "gender": "Literatura Infantojuvenil",
+    "desc": "A história de um jovem príncipe que deixa seu pequeno asteroide em busca de amizade e sabedoria, encontrando personagens peculiares pelo caminho."
+  },
+  {
+    "id": "5",
+    "title": "Orgulho e Preconceito",
+    "author": "Jane Austen",
+    "gender": "Romance",
+    "desc": "A história de Elizabeth Bennet, uma mulher independente e de espírito livre, e seu relacionamento com o rico e arrogante Sr. Darcy."
+  }
+]

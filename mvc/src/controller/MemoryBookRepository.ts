@@ -21,8 +21,8 @@ export default class MemoryBookRepository implements IBookRepository {
       data.title,
       data.author,
       data.gender,
-      data.id,
-      data.desc
+      data.desc,
+      data.id
     ))
   }
 
@@ -39,12 +39,14 @@ export default class MemoryBookRepository implements IBookRepository {
   };
 
   deleteBook = (id: string): void => {
-    this._data.filter(elem => elem.id !== id)
+    this._data = this._data.filter(elem => elem.id !== id)
   };
 
   updateBook = (book: Book): void => {
-    this._data.filter(elem => elem.id === book.id)
-    this._data.push(book)
+    const indexOfBook = this._data.findIndex(b => b.id === book.id)
+    if (indexOfBook === -1)
+      throw new Error("Invalid index of edited book.")
+    this._data.splice(indexOfBook, 1, book)
   };
   
 }

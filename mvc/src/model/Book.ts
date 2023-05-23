@@ -9,8 +9,8 @@ export default class Book {
     title: string,
     author: string,
     gender: string,
-    id?: string,
-    desc?: string
+    desc?: string,
+    id?: string
   ) {
     if (!id)
       this._id = this.generateBookId()

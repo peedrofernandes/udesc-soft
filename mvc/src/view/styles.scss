@@ -20,10 +20,6 @@ ul, li {
   list-style: none;
 }
 
-.hidden {
-  display: none;
-}
-
 #content {
   margin-top: 80px;
   display: flex;
@@ -33,9 +29,10 @@ ul, li {
   width: 100%;
 }
 
-.viewport {
+.grid-viewport {
   width: 100%;
   display: flex;
+  justify-content: center;
   position: relative;
 
   .grid {
@@ -78,6 +75,24 @@ ul, li {
 
     .grid-item {
       position: relative;
+
+      &.isolated {
+        // 0-599px - xs
+        grid-column-start: 1;
+        grid-column-end: 5;
+      
+        // 600-904px - sm
+        @media (min-width: 600px) {
+          grid-column-start: 2;
+          grid-column-end: 8;
+        }
+      
+        // 905-1239px - md
+        @media (min-width: 905px) {
+          grid-column-start: 3;
+          grid-column-end: 11;
+        }
+      }
 
       &.s1 {
         grid-column: span 1;
@@ -182,12 +197,68 @@ ul, li {
   position: absolute;
   top: 0;
   height: 0;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   background-color: #11141490;
   z-index: 1;
+  display: flex;
+  align-items: center;
+
+  &.hidden {
+    display: none;
+  }
 
   #modal-box {
     background-color: white;
+    width: 100%;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+
+    &.height1 {
+      height: 80vh;
+    }
+    &.height2 {
+      height: 40vh;
+    }
+    &.height3 {
+      height: 20vh;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-evenly;
+      width: 100%;
+      height: 100%;
+      div {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        input {
+          padding: 8px 4px;
+          &:focus {
+            outline: none;
+          }
+        }
+      }
+      button {
+        aspect-ratio: 21.5 / 9;
+        width: 80px;
+        font-weight: bold;
+        background-color: #111414;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        &:hover {
+          transform: scale(1.1);
+        }
+        transition: .05s ease-in-out;
+      }
+    }
   }
 }

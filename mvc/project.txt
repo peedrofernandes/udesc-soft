@@ -6,3 +6,12 @@ Requisitos:
   - O usuário deve poder editar campos dos livros;
   - Os dados devem ser carregados e salvos localmente pelo usuário;
   - Um conjunto padrão de dados deve ser fornecido;
+
+INSTRUÇÕES PARA RODAR O PROGRAMA
+  - Requisitos: node 14 e o gerenciador de pacotes npm;
+  - Comandos:
+    - npm install
+    - npm run build
+    - npm start
+  - Uma pasta "dist" será criada com um index.html e um bundle.js;
+  - Basta abrir o arquivo index.html para iniciar o programa.
